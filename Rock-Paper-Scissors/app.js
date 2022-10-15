@@ -8,7 +8,7 @@ const game = () => { //Placing all code within this function ensures there are n
       const introScreen = document.querySelector(".intro"); //Here we are setting introScreen to the class: intro allowing us to manipluate it later on
       const match = document.querySelector(".match");
   
-      playBtn.addEventListener("click", () => { 
+      playBtn.addEventListener("click", () => { //Event listener is added so on click, this function will run 
         introScreen.classList.add("fadeOut"); //This fades out the intro screen as we add on a class which makes the opacity 0
         match.classList.add("fadeIn"); //This fades in the match screen as we add on a class which makes the opacity 1
       });
