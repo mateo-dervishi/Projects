@@ -54,7 +54,6 @@
   }
 
   .match button {
-
     width: 150px;
     height: 50px;
     background: none;
@@ -64,7 +63,6 @@
     background: rgb(45, 117, 96);
     border-radius: 3px;
     cursor: pointer;
-
   }
   
   .match {
@@ -74,6 +72,7 @@
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease 0.5s;
   }
+
   .winner {
     color: rgb(224, 224, 224);
     text-align: center;
@@ -89,7 +88,7 @@
   
   .player-hand {
     transform: rotateY(180deg);
-  } /*Rotates player hanhd so both hands are facing on another*/
+  } /*Rotates player hand so both hands are facing one another*/
   
   div.fadeOut {
     opacity: 0;
