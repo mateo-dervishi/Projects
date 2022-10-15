@@ -1,4 +1,4 @@
-const game = () => { //Placing all code within this function ensures there are no global variables
+onst game = () => { //Placing all code within this function ensures there are no global variables
     let pScore = 0;
     let cScore = 0;
   
