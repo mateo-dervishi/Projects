@@ -12,7 +12,7 @@
   }
   
   .score {
-    color: rgb(224, 224, 224);
+    color: white;
     height: 20vh;
     display: flex;
     justify-content: space-around; /*So player and Computer appear side to side horizonatally*/
@@ -28,12 +28,13 @@
   } /*This centres the score and spaces it between the player and user titles*/
   
   .intro {
-    color: rgb(224, 224, 224);
+    color:white;
     height: 50vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
     transition: opacity 0.5s ease; /*The into screen fades out*/
   }
   
@@ -47,7 +48,7 @@
     height: 50px;
     background: none;
     border: none;
-    color: rgb(224, 224, 224);
+    color: white;
     font-size: 20px;
     background: rgb(45, 117, 96);
     border-radius: 3px;
@@ -63,9 +64,9 @@
   }
 
   .winner {
-    color: rgb(224, 224, 224);
+    color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
   }
   
   .hands,
