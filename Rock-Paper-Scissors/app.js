@@ -8,7 +8,7 @@ const game = () => { //Placing all code within this function ensures there are n
       const introScreen = document.querySelector(".intro");
       const match = document.querySelector(".match");
   
-      playBtn.addEventListener("click", () => {
+      playBtn.addEventListener("click", () => { 
         introScreen.classList.add("fadeOut"); //This fades out the intro screen
         match.classList.add("fadeIn"); //This fades in the match screen
       });
@@ -18,13 +18,7 @@ const game = () => { //Placing all code within this function ensures there are n
       const options = document.querySelectorAll(".options button");
       const playerHand = document.querySelector(".player-hand");
       const computerHand = document.querySelector(".computer-hand");
-      const hands = document.querySelectorAll(".hands img");
-  
-      hands.forEach(hand => {
-        hand.addEventListener("animationend", function() {
-          this.style.animation = "";
-        });
-      });
+
       //Computer Options are randomly generated
       const computerOptions = ["rock", "paper", "scissors"];
   
@@ -59,7 +53,6 @@ const game = () => { //Placing all code within this function ensures there are n
         winner.textContent = "It is a tie";
         return;
       }
-      
       //Here we are checking for rock
       if (playerChoice === "rock") {
         if (computerChoice === "scissors") {
