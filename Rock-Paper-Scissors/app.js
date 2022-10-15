@@ -28,7 +28,6 @@ const game = () => { //Placing all code within this function ensures there are n
           const computerNumber = Math.floor(Math.random() * 3); //Generates a random integer, 0-2
           const computerChoice = computerOptions[computerNumber]; //Choses rock, paper or scissors depending on rgn
   
-          
           //Here is where we call compare hands
           compareHands(this.textContent, computerChoice); //This updates the text after each battle by calling the function and feeding in the 2 values
           //Here We Update Images
@@ -47,7 +46,7 @@ const game = () => { //Placing all code within this function ensures there are n
   
     const compareHands = (playerChoice, computerChoice) => {
 
-        const winner = document.querySelector(".winner"); //This returns the first element within the document that matches the specified selector
+        const winner = document.querySelector(".winner");
 
       if (playerChoice === computerChoice) {
         winner.textContent = "It is a tie";
