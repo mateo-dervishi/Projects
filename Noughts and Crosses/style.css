@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} /* Resetting all of the dom rules*/
+
+:root {
+    --winning-blocks: #2d414b; /* Created a winning-blokcs variable for a highlighted bakground once the user achieves 3 in a row */
+}
+
+body {
+    color: #F2C14E;
+    font-family: 'Finger Paint';
+}
+h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #37505C;
+}
+
+#gameboard {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2C14E;
+    font-size: 100px;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #F2C14E;
+    color: #333;
+    border-color: #F2C14E;
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(5px);
+}
