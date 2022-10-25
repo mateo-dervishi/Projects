@@ -1,4 +1,4 @@
-onst game = () => { //Placing all code within this function ensures there are no global variables
+const game = () => { //Placing all code within this function ensures there are no global variables
     let pScore = 0;
     let cScore = 0;
   
@@ -29,9 +29,9 @@ onst game = () => { //Placing all code within this function ensures there are no
           const computerChoice = computerOptions[computerNumber]; //Choses rock, paper or scissors depending on randomly generated number
   
           //Here is where we call compare hands
-          compareHands(this.textContent, computerChoice); //This updates the text after each battle by calling the function and feeding in the 2 values
+          compareHands(this.innerHTML, computerChoice); //This updates the text after each battle by calling the function and feeding in the 2 values
           //Here We Update Images
-          playerHand.src = `./images/${this.textContent}.png`; //This will select one of the rock, paper or scissors images
+          playerHand.src = `./images/${this.innerHTML}.png`; //This will select one of the rock, paper or scissors images
           computerHand.src = `./images/${computerChoice}.png`;
         });
       });
@@ -40,8 +40,8 @@ onst game = () => { //Placing all code within this function ensures there are no
     const updateScore = () => { //This function updates the score
       const playerScore = document.querySelector(".player-score p"); 
       const computerScore = document.querySelector(".computer-score p");
-      playerScore.textContent = pScore;
-      computerScore.textContent = cScore;
+      playerScore.innerHTML = pScore;
+      computerScore.innerHTML = cScore;
     };
   
     const compareHands = (playerChoice, computerChoice) => {
@@ -49,18 +49,18 @@ onst game = () => { //Placing all code within this function ensures there are no
         const winner = document.querySelector(".winner");
 
       if (playerChoice === computerChoice) {
-        winner.textContent = "It is a tie";
+        winner.innerHTML = "It is a tie";
         return;
       }
       //Here we are checking for rock
       if (playerChoice === "rock") {
         if (computerChoice === "scissors") {
-          winner.textContent = "Player Wins";
+          winner.innerHTML = "Player Wins";
           pScore++;
           updateScore(); //Running this function every time a variable chnages in order for the score board to update
           return;
         } else {
-          winner.textContent = "Computer Wins";
+          winner.innerHTML = "Computer Wins";
           cScore++;
           updateScore();
           return;
@@ -69,12 +69,12 @@ onst game = () => { //Placing all code within this function ensures there are no
       //Here we are checking for paper
       if (playerChoice === "paper") {
         if (computerChoice === "scissors") {
-          winner.textContent = "Computer Wins";
+          winner.innerHTML = "Computer Wins";
           cScore++;
           updateScore();
           return;
         } else {
-          winner.textContent = "Player Wins";
+          winner.innerHTML = "Player Wins";
           pScore++;
           updateScore();
           return;
@@ -83,12 +83,12 @@ onst game = () => { //Placing all code within this function ensures there are no
       //Here we are checking for Scissors
       if (playerChoice === "scissors") {
         if (computerChoice === "rock") {
-          winner.textContent = "Computer Wins";
+          winner.innerHTML = "Computer Wins";
           cScore++;
           updateScore();
           return;
         } else {
-          winner.textContent = "Player Wins";
+          winner.innerHTML = "Player Wins";
           pScore++;
           updateScore();
           return;
