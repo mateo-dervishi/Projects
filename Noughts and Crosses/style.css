@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-} /* Resetting all of the dom rules*/
+}
 
 :root {
     --winning-blocks: #2d414b; /* Created a winning-blokcs variable for a highlighted bakground once the user achieves 3 in a row */
