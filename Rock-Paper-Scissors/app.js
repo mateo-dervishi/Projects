@@ -1,16 +1,16 @@
-const game = () => { //Placing all code within this function ensures there are no global variables
+const game = () => {
     let pScore = 0;
     let cScore = 0;
   
     //Start the Game
     const startGame = () => {
       const playBtn = document.querySelector(".intro button");
-      const introScreen = document.querySelector(".intro"); //Here we are setting introScreen to the class: intro allowing us to manipluate it later on
+      const introScreen = document.querySelector(".intro");
       const match = document.querySelector(".match");
   
-      playBtn.addEventListener("click", () => { //Event listener is added so on click, this function will run 
-        introScreen.classList.add("fadeOut"); //This fades out the intro screen as we add on a class which makes the opacity 0
-        match.classList.add("fadeIn"); //This fades in the match screen as we add on a class which makes the opacity 1
+      playBtn.addEventListener("click", () => {
+        introScreen.classList.add("fadeOut"); //Fades out the intro screen
+        match.classList.add("fadeIn"); //Fades in the match screen
       });
     };
     //Play Match
@@ -19,25 +19,24 @@ const game = () => { //Placing all code within this function ensures there are n
       const playerHand = document.querySelector(".player-hand");
       const computerHand = document.querySelector(".computer-hand");
 
-      //Computer Options are randomly generated
       const computerOptions = ["rock", "paper", "scissors"];
   
-      options.forEach((option) => { //Here im looping through each and getting an indvidual button for each option chosen
+      options.forEach((option) => {
         option.addEventListener("click", function() {
           //Computer Choice
-          const computerNumber = Math.floor(Math.random() * 3); //Generates a random integer, 0-2
-          const computerChoice = computerOptions[computerNumber]; //Choses rock, paper or scissors depending on randomly generated number
+          const computerNumber = Math.floor(Math.random() * 3);
+          const computerChoice = computerOptions[computerNumber]; //Choses hand dependant on rgn
   
-          //Here is where we call compare hands
-          compareHands(this.innerHTML, computerChoice); //This updates the text after each battle by calling the function and feeding in the 2 values
-          //Here We Update Images
-          playerHand.src = `./images/${this.innerHTML}.png`; //This will select one of the rock, paper or scissors images
+          //compare hands called
+          compareHands(this.innerHTML, computerChoice); //Updates the text after each battle by calling the function and feeding in the 2 values
+          //Imgs updated
+          playerHand.src = `./images/${this.innerHTML}.png`; //Will select one of the imgs
           computerHand.src = `./images/${computerChoice}.png`;
         });
       });
     };
   
-    const updateScore = () => { //This function updates the score
+    const updateScore = () => {
       const playerScore = document.querySelector(".player-score p"); 
       const computerScore = document.querySelector(".computer-score p");
       playerScore.innerHTML = pScore;
@@ -57,7 +56,7 @@ const game = () => { //Placing all code within this function ensures there are n
         if (computerChoice === "scissors") {
           winner.innerHTML = "Player Wins";
           pScore++;
-          updateScore(); //Running this function every time a variable chnages in order for the score board to update
+          updateScore();
           return;
         } else {
           winner.innerHTML = "Computer Wins";
