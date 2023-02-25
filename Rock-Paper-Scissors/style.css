@@ -3,10 +3,9 @@
     padding: 0;
     box-sizing: border-box;
   }
-  /*Removed all global margins*/
   
   section {
-    height: 100vh; /* so its full screen*/
+    height: 100vh;
     background-color: rgb(39, 41, 68);
     font-family: sans-serif;
   }
@@ -15,7 +14,7 @@
     color: white;
     height: 20vh;
     display: flex;
-    justify-content: space-around; /*So player and Computer appear side to side horizonatally*/
+    justify-content: space-around;
     align-items: center; 
   }
   .score h2 {
@@ -25,7 +24,7 @@
     text-align: center;
     padding: 10px;
     font-size: 25px;
-  } /*This centres the score and spaces it between the player and user titles*/
+  }
   
   .intro {
     color:white;
@@ -74,7 +73,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-  } /*Centres and positions both hands perpendicular to one another*/ 
+  }
   
   .player-hand {
     transform: rotateY(180deg);
